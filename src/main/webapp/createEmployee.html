@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" href="css/createEmployee.css"/> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="index.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body class="background-image font-color">
+    <div style=" width:50%; margin-left: 25%; margin-right:25%">
+    <form action="createemployee" method="post">
+        <h1 class="heading font-color  margin-bottom: 20px">New Employee Form</h1>
+        <div class="row mt-4">
+            <div class="col-4 ">
+                <label> <strong>User ID : <span class="color">*</span></strong></label>
+            </div>
+            <div class="col-8">
+                <input type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" class="form-control width" maxlength="5" name="userId" required />
+
+            </div>
+        </div>
+        <div class="row mb-2 mt-2">
+            <div class="col-4  ">
+                <label> <strong>First Name:<span class="color">*</span></strong></label>
+            </div>
+            <div class="col-8  ">
+                <input type="text" class="form-control width" id="contact-name" onkeyup="first()" name="fname" required />
+                <span id="firstname"></span>
+            </div>
+        </div>
+
+
+        <div class="row mb-2">
+            <div class="col-4">
+                <label> <strong>Last Name:<span class="color">*</span></strong></label>
+            </div>
+            <div class="col-8">
+                <input type="text" class="form-control width" id="last-name" onkeyup="last()" name="lname" required />
+                <span id="lname"></span>
+            </div>
+        </div>
+        <div class="row mb-2">
+            <div class="col-4">
+                <label> <strong>DOJ:<span class="color">*</span></strong></label>
+            </div>
+            <div class="col-8">
+                <input type="date" class="form-control width" name="doj" required />
+            </div>
+        </div>
+
+        <div class="row mb-2">
+            <div class="col-4">
+                <label> <strong>DOB:<span class="color">*</span></strong></label>
+            </div>
+            <div class="col-8">
+                <input type="date" min="1985-01-01" max="2010-01-01" class="form-control width" name="dob" required />
+            </div>
+        </div>
+        <div class="row mb-2">
+            <div class="col-4">
+                <label> <strong>Email:<span class="color">*</span></strong></label>
+            </div>
+            <div class="col-8">
+                <input type="email" class="form-control width" name="email" required onkeyup="emailf()" id="text" />
+                <span id="email1"></span>
+            </div>
+        </div>
+        <div class="row mb-2">
+            <div class="col-4">
+                <label> <strong>Mobile No:<span class="color">*</span></strong></label>
+            </div>
+            <div class="col-8">
+                <input type="number" class="form-control width" name="phoneNumber" required onkeyup="emailf()" id="text" />
+                <span id="email1"></span>
+            </div>
+        </div>
+        <div class="row mb-2">
+            <div class="col-4">
+                <label> <strong>Password:<span class="color">*</span></strong></label>
+            </div>
+            <div class="col-8">
+                <input type="password" class="form-control width" required name="pw" />
+            </div>
+        </div>
+
+        <div class="row mb-2">
+            <div class="col-4">
+                <label> <strong>Designation:<span class="color">*</span></strong></label>
+            </div>
+            <div class="col-8">
+                <input type="text" class="form-control width" name="designation" required id="designation-name" onkeyup="designationD()" />
+                <span id="designation"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4 ">
+                <label> <strong>Gender:<span class="color">*</span></strong></label>
+            </div>
+            <div class=" col-8">
+                <input type="radio" id="checkbox" name="gnd1" checked required value="Male" />
+                <label for="checkbox">Male</label>
+                <input type="radio" id="checkbox1" name="gnd1" value="Female" />
+                <label for="checkbox1">Female</label>
+
+            </div>
+        </div>
+
+        <div class="text-center mt-2 mb-2 button">
+
+            <input type="submit" class="btn btn-primary mb-3" value="Submit">
+
+           
+        </div>
+
+	</form>
+	 <a href="AdminInterface.jsp">
+                <button class="btn btn-primary mb-3" >Back</button></a>
+    </div>
+<script src="index.js"></script>
+</body>
+
+</html>
