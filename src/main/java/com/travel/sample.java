@@ -6,6 +6,8 @@ public class sample {
 		String a= "14:14pm";
 		String b = a.substring(0,2);
 		System.out.println(b);
+System.out.println(b);
+
 		
 		int time = Integer.parseInt(b);
 		System.out.println(time+14);
